@@ -10,6 +10,8 @@
 		E318042C1C0B254800204A91 /* BOTRateKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E318042B1C0B254800204A91 /* BOTRateKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E31804331C0B254800204A91 /* BOTRateKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E31804281C0B254800204A91 /* BOTRateKit.framework */; settings = {ASSET_TAGS = (); }; };
 		E31804381C0B254800204A91 /* BOTRateKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31804371C0B254800204A91 /* BOTRateKitTests.swift */; };
+		E31804431C0B270E00204A91 /* RateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31804421C0B270E00204A91 /* RateData.swift */; settings = {ASSET_TAGS = (); }; };
+		E31804451C0B27CD00204A91 /* BOTRateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31804441C0B27CD00204A91 /* BOTRateService.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		E31804321C0B254800204A91 /* BOTRateKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BOTRateKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E31804371C0B254800204A91 /* BOTRateKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BOTRateKitTests.swift; sourceTree = "<group>"; };
 		E31804391C0B254800204A91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E31804421C0B270E00204A91 /* RateData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateData.swift; sourceTree = "<group>"; };
+		E31804441C0B27CD00204A91 /* BOTRateService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BOTRateService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 			children = (
 				E318042B1C0B254800204A91 /* BOTRateKit.h */,
 				E318042D1C0B254800204A91 /* Info.plist */,
+				E31804421C0B270E00204A91 /* RateData.swift */,
+				E31804441C0B27CD00204A91 /* BOTRateService.swift */,
 			);
 			path = BOTRateKit;
 			sourceTree = "<group>";
@@ -142,6 +148,7 @@
 		E318041F1C0B254800204A91 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Azyukei;
 				TargetAttributes = {
@@ -195,6 +202,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E31804431C0B270E00204A91 /* RateData.swift in Sources */,
+				E31804451C0B27CD00204A91 /* BOTRateService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +318,7 @@
 		E318043D1C0B254800204A91 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -319,12 +329,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.BOTRateKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		E318043E1C0B254800204A91 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
